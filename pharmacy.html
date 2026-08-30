@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediSupport | Pharmacy Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+
+    <div class="logo">
+
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+        </div>
+
+
+        <div>
+
+            <h2>Medi<span>Support</span></h2>
+
+            <p>Pharmacy Concession Portal</p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+
+            Home
+
+        </a>
+
+
+        <a href="#concession">
+
+            Concession Program
+
+        </a>
+
+
+        <a href="#pharmacy-dashboard">
+
+            Dashboard
+
+        </a>
+
+    </nav>
+
+
+
+    <div class="nav-buttons">
+
+        <a
+            href="index.html"
+            class="login-btn"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+    </div>
+
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-badge">
+
+            <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+            Affordable Medicine Support
+
+        </div>
+
+
+        <h1>
+
+            Help Patients Access
+            <span>Affordable Medicines</span>
+
+        </h1>
+
+
+        <p>
+
+            Pharmacies can provide recurring discounts
+            and medicine concessions to verified patients
+            requiring long-term medical treatment.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+
+            <button
+                class="primary-btn"
+                id="createConcessionBtn"
+            >
+
+                <i class="fa-solid fa-tags"></i>
+
+                Create Concession
+
+            </button>
+
+
+            <a
+                href="#concession"
+                class="secondary-btn"
+            >
+
+                View Program
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+        </div>
+
+
+        <div class="hero-stats">
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-tags"></i>
+
+                <div>
+
+                    <h3>Discounts</h3>
+
+                    <p>Medicine Concessions</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-user-check"></i>
+
+                <div>
+
+                    <h3>Verified</h3>
+
+                    <p>Eligible Patients</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-calendar"></i>
+
+                <div>
+
+                    <h3>Recurring</h3>
+
+                    <p>Monthly Support</p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- CONCESSION SECTION -->
+
+<section
+    class="organization-dashboard"
+    id="concession"
+>
+
+
+    <div class="dashboard-header">
+
+
+        <div>
+
+
+            <span class="section-tag">
+
+                PHARMACY CONCESSION
+
+            </span>
+
+
+            <h2>
+
+                Create Medicine Support Program
+
+            </h2>
+
+
+            <p>
+
+                Select a medicine category,
+                discount percentage and duration.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="pharmacy-form-card">
+
+
+        <div class="input-group">
+
+
+            <label>
+
+                Medicine Category
+
+            </label>
+
+
+            <select
+                id="medicineCategory"
+            >
+
+                <option>
+
+                    General Medicines
+
+                </option>
+
+
+                <option>
+
+                    Long-Term Medicines
+
+                </option>
+
+
+                <option>
+
+                    Specialized Medicines
+
+                </option>
+
+
+                <option>
+
+                    Monthly Prescription Medicines
+
+                </option>
+
+
+                <option>
+
+                    Other
+
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+        <div class="input-group">
+
+
+            <label>
+
+                Discount Percentage
+
+            </label>
+
+
+            <select
+                id="discountPercentage"
+            >
+
+                <option value="5">
+
+                    5%
+
+                </option>
+
+
+                <option value="10">
+
+                    10%
+
+                </option>
+
+
+                <option value="15">
+
+                    15%
+
+                </option>
+
+
+                <option value="20">
+
+                    20%
+
+                </option>
+
+
+                <option value="25">
+
+                    25%
+
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+        <div class="input-group">
+
+
+            <label>
+
+                Support Duration
+
+            </label>
+
+
+            <select
+                id="discountDuration"
+            >
+
+                <option>
+
+                    3 Months
+
+                </option>
+
+
+                <option>
+
+                    6 Months
+
+                </option>
+
+
+                <option>
+
+                    1 Year
+
+                </option>
+
+
+                <option>
+
+                    Long-Term
+
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+        <button
+            id="offerDiscountBtn"
+        >
+
+            <i class="fa-solid fa-tags"></i>
+
+            Offer Pharmacy Concession
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- CONCESSION RESULT -->
+
+<section
+    class="dashboard-section"
+    id="pharmacy-dashboard"
+>
+
+
+    <div class="dashboard-header">
+
+
+        <div>
+
+
+            <span class="section-tag">
+
+                PHARMACY DASHBOARD
+
+            </span>
+
+
+            <h2>
+
+                Concession Impact Overview
+
+            </h2>
+
+
+            <p>
+
+                Track the medicine discounts provided
+                through the MediSupport network.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="dashboard-summary-grid">
+
+
+        <div class="summary-card">
+
+
+            <div class="summary-icon">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    Patient Status
+
+                </p>
+
+
+                <h3 id="pharmacyPatientStatus">
+
+                    Waiting
+
+                </h3>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+
+            <div class="summary-icon green-icon">
+
+                <i class="fa-solid fa-percent"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    Active Discount
+
+                </p>
+
+
+                <h3 id="activeDiscount">
+
+                    0%
+
+                </h3>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+
+            <div class="summary-icon">
+
+                <i class="fa-solid fa-calendar"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    Support Duration
+
+                </p>
+
+
+                <h3 id="activeDuration">
+
+                    Not Set
+
+                </h3>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+
+            <div class="summary-icon orange-icon">
+
+                <i class="fa-solid fa-pills"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    Medicine Category
+
+                </p>
+
+
+                <h3 id="activeMedicineCategory">
+
+                    Not Set
+
+                </h3>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- PATIENT INFO -->
+
+    <div class="verification-card">
+
+
+        <div class="verification-card-header">
+
+
+            <div>
+
+
+                <h3 id="pharmacyPatientName">
+
+                    Verified Patient Information
+
+                </h3>
+
+
+                <p id="pharmacyPatientRequirement">
+
+                    Waiting for hospital verification.
+
+                </p>
+
+
+            </div>
+
+
+            <span
+                class="status pending-status"
+                id="pharmacyEligibilityStatus"
+            >
+
+                Pending
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        <i class="fa-solid fa-heart-pulse"></i>
+
+        <h2>
+
+            Medi<span>Support</span>
+
+        </h2>
+
+    </div>
+
+
+    <p>
+
+        Pharmacy Medicine Concession Portal
+
+    </p>
+
+
+    <p class="footer-note">
+
+        Community Development Project Prototype
+
+    </p>
+
+
+</footer>
+
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const patientData =
+            JSON.parse(
+                localStorage.getItem(
+                    "mediSupportPatient"
+                )
+            );
+
+
+        const verification =
+            localStorage.getItem(
+                "mediSupportVerification"
+            );
+
+
+        /* LOAD VERIFIED PATIENT */
+
+
+        if (
+            patientData &&
+            verification === "verified"
+        ) {
+
+
+            document.getElementById(
+                "pharmacyPatientName"
+            ).textContent =
+                patientData.name;
+
+
+            document.getElementById(
+                "pharmacyPatientRequirement"
+            ).textContent =
+                "Verified patient requiring recurring medical support.";
+
+
+            document.getElementById(
+                "pharmacyPatientStatus"
+            ).textContent =
+                "Eligible";
+
+
+            document.getElementById(
+                "pharmacyEligibilityStatus"
+            ).textContent =
+                "Verified";
+
+
+            document.getElementById(
+                "pharmacyEligibilityStatus"
+            ).className =
+                "status verified-status";
+
+
+        }
+
+
+        /* SCROLL */
+
+
+        document.getElementById(
+            "createConcessionBtn"
+        ).addEventListener(
+            "click",
+            function () {
+
+
+                document
+                    .getElementById(
+                        "concession"
+                    )
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+
+            }
+        );
+
+
+        /* OFFER CONCESSION */
+
+
+        document.getElementById(
+            "offerDiscountBtn"
+        ).addEventListener(
+            "click",
+            function () {
+
+
+                if (
+                    verification !== "verified"
+                ) {
+
+                    alert(
+                        "A patient must first be verified by the hospital before a concession can be assigned."
+                    );
+
+                    return;
+
+                }
+
+
+                const category =
+                    document.getElementById(
+                        "medicineCategory"
+                    ).value;
+
+
+                const discount =
+                    document.getElementById(
+                        "discountPercentage"
+                    ).value;
+
+
+                const duration =
+                    document.getElementById(
+                        "discountDuration"
+                    ).value;
+
+
+                document.getElementById(
+                    "activeDiscount"
+                ).textContent =
+                    discount + "%";
+
+
+                document.getElementById(
+                    "activeDuration"
+                ).textContent =
+                    duration;
+
+
+                document.getElementById(
+                    "activeMedicineCategory"
+                ).textContent =
+                    category;
+
+
+                localStorage.setItem(
+                    "mediSupportPharmacyDiscount",
+                    JSON.stringify({
+                        category: category,
+                        discount: discount,
+                        duration: duration
+                    })
+                );
+
+
+                alert(
+                    discount +
+                    "% pharmacy concession has been successfully created for " +
+                    duration +
+                    "."
+                );
+
+
+                document
+                    .getElementById(
+                        "pharmacy-dashboard"
+                    )
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+
+            }
+        );
+
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
