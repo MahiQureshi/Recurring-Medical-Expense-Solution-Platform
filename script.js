@@ -2388,7 +2388,183 @@ document.addEventListener(
 
     }
 );
+/* =========================================================
+   ADDITIONAL CLICKABLE FEATURES
+   ========================================================= */
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================================
+       PROBLEM CARDS
+       ========================================= */
+
+    const problemCards = document.querySelectorAll(".problem-card");
+
+    problemCards.forEach(function (card) {
+
+        card.style.cursor = "pointer";
+
+        card.addEventListener("click", function () {
+
+            const title = this.querySelector("h3").textContent.trim();
+
+            const expenseType =
+                document.getElementById("expenseType");
+
+
+            if (title === "Recurring Medicines") {
+
+                if (expenseType) {
+
+                    expenseType.value =
+                        "Monthly Medicines";
+
+                }
+
+            }
+
+            else if (title === "Long-Term Treatment") {
+
+                if (expenseType) {
+
+                    expenseType.value =
+                        "Regular Treatment";
+
+                }
+
+            }
+
+
+            scrollToSection("patient-registration");
+
+        });
+
+    });
+
+
+
+    /* =========================================
+       MAKE COMPLETE USER CARDS CLICKABLE
+       ========================================= */
+
+    const patientCard =
+        document.querySelector(".patient-card");
+
+
+    const hospitalCard =
+        document.querySelector(".hospital-card");
+
+
+    const ngoCard =
+        document.querySelector(".ngo-card");
+
+
+    const pharmacyCard =
+        document.querySelector(".pharmacy-card");
+
+
+
+    if (patientCard) {
+
+        patientCard.style.cursor = "pointer";
+
+        patientCard.addEventListener(
+            "click",
+            function () {
+
+                scrollToSection(
+                    "patient-registration"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    if (hospitalCard) {
+
+        hospitalCard.style.cursor = "pointer";
+
+        hospitalCard.addEventListener(
+            "click",
+            function () {
+
+                scrollToSection(
+                    "hospital-dashboard"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    if (ngoCard) {
+
+        ngoCard.style.cursor = "pointer";
+
+        ngoCard.addEventListener(
+            "click",
+            function () {
+
+                scrollToSection(
+                    "ngo-dashboard"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    if (pharmacyCard) {
+
+        pharmacyCard.style.cursor = "pointer";
+
+        pharmacyCard.addEventListener(
+            "click",
+            function () {
+
+                scrollToSection(
+                    "pharmacy-dashboard"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================
+       PREVENT BUTTON CLICK FROM TRIGGERING
+       THE CARD TWICE
+       ========================================= */
+
+    const userButtons =
+        document.querySelectorAll(
+            ".user-action-btn"
+        );
+
+
+    userButtons.forEach(function (button) {
+
+        button.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+            }
+        );
+
+    });
+
+});
 
 /* =========================================================
    END OF MEDISUPPORT JAVASCRIPT
