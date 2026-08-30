@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediSupport | NGO Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <div>
+            <h2>Medi<span>Support</span></h2>
+            <p>NGO & Funding Organization Portal</p>
+        </div>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="#verified-patients">
+            Verified Patients
+        </a>
+
+        <a href="#support-dashboard">
+            Dashboard
+        </a>
+
+    </nav>
+
+
+    <div class="nav-buttons">
+
+        <a href="index.html" class="login-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+
+            <i class="fa-solid fa-handshake-angle"></i>
+
+            Continuous Healthcare Assistance
+
+        </div>
+
+
+        <h1>
+
+            Support Verified Patients
+            <span>Every Month</span>
+
+        </h1>
+
+
+        <p>
+
+            NGOs and funding organizations can discover
+            verified patients and provide recurring
+            financial assistance for essential healthcare.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                class="primary-btn"
+                id="viewVerifiedPatientsBtn"
+            >
+
+                View Verified Patients
+
+            </button>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <h3>Verified</h3>
+
+                    <p>Medical Cases</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <div>
+
+                    <h3>Recurring</h3>
+
+                    <p>Monthly Support</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <div>
+
+                    <h3>Track</h3>
+
+                    <p>Support Impact</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section
+    class="organization-dashboard"
+    id="verified-patients"
+>
+
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <span class="section-tag">
+
+                VERIFIED PATIENT
+
+            </span>
+
+            <h2>
+
+                Patient Requiring Financial Support
+
+            </h2>
+
+            <p>
+
+                Review verified medical requirements
+                and select a monthly support amount.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="ngo-support-card">
+
+
+        <div class="ngo-patient-info">
+
+
+            <div class="patient-mini-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3 id="ngoPatientName">
+
+                    Patient Not Available
+
+                </h3>
+
+
+                <p id="ngoPatientRequirement">
+
+                    Waiting for hospital verification.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="ngo-expense-info">
+
+
+            <div>
+
+                <span>
+
+                    Monthly Requirement
+
+                </span>
+
+
+                <strong id="ngoMonthlyRequirement">
+
+                    ₹0
+
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+
+                    Duration
+
+                </span>
+
+
+                <strong id="ngoDuration">
+
+                    Not Available
+
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="support-amounts">
+
+
+            <h3>
+
+                Select Monthly Support Amount
+
+            </h3>
+
+
+            <div class="amount-buttons">
+
+
+                <button
+                    class="supportAmount"
+                    data-amount="500"
+                >
+
+                    ₹500
+
+                </button>
+
+
+                <button
+                    class="supportAmount"
+                    data-amount="1000"
+                >
+
+                    ₹1,000
+
+                </button>
+
+
+                <button
+                    class="supportAmount"
+                    data-amount="2000"
+                >
+
+                    ₹2,000
+
+                </button>
+
+
+                <button
+                    class="supportAmount"
+                    data-amount="3000"
+                >
+
+                    ₹3,000
+
+                </button>
+
+
+                <button
+                    class="supportAmount"
+                    data-amount="5000"
+                >
+
+                    ₹5,000
+
+                </button>
+
+
+            </div>
+
+
+            <p id="selectedSupportMessage">
+
+                Select an amount to provide support.
+
+            </p>
+
+
+            <button
+                class="provide-support-btn"
+                id="provideSupportBtn"
+            >
+
+                <i class="fa-solid fa-hand-holding-heart"></i>
+
+                Provide Selected Support
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<section
+    class="dashboard-section"
+    id="support-dashboard"
+>
+
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <span class="section-tag">
+
+                NGO DASHBOARD
+
+            </span>
+
+            <h2>
+
+                Support Impact Overview
+
+            </h2>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="dashboard-summary-grid">
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div>
+
+                <p>Patients Supported</p>
+
+                <h3 id="patientsSupported">
+
+                    0
+
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon green-icon">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+            </div>
+
+            <div>
+
+                <p>Monthly Support</p>
+
+                <h3 id="totalMonthlySupport">
+
+                    ₹0
+
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+
+                <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+            <div>
+
+                <p>Support Status</p>
+
+                <h3 id="supportStatus">
+
+                    Pending
+
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<footer>
+
+    <div class="footer-logo">
+
+        <i class="fa-solid fa-heart-pulse"></i>
+
+        <h2>Medi<span>Support</span></h2>
+
+    </div>
+
+    <p>
+        NGO & Funding Organization Support Portal
+    </p>
+
+    <p class="footer-note">
+        Community Development Project Prototype
+    </p>
+
+</footer>
+
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        let selectedAmount = 0;
+
+
+        const patientData =
+            JSON.parse(
+                localStorage.getItem(
+                    "mediSupportPatient"
+                )
+            );
+
+
+        const verification =
+            localStorage.getItem(
+                "mediSupportVerification"
+            );
+
+
+        /* LOAD PATIENT */
+
+
+        if (
+            patientData &&
+            verification === "verified"
+        ) {
+
+
+            document.getElementById(
+                "ngoPatientName"
+            ).textContent =
+                patientData.name;
+
+
+            document.getElementById(
+                "ngoPatientRequirement"
+            ).textContent =
+                "Verified patient requiring recurring medical support.";
+
+
+            document.getElementById(
+                "ngoMonthlyRequirement"
+            ).textContent =
+                "₹" +
+                Number(
+                    patientData.monthlyExpense
+                ).toLocaleString("en-IN");
+
+
+            document.getElementById(
+                "ngoDuration"
+            ).textContent =
+                patientData.durationText;
+
+
+        }
+
+
+        /* SCROLL BUTTON */
+
+
+        document.getElementById(
+            "viewVerifiedPatientsBtn"
+        ).addEventListener(
+            "click",
+            function () {
+
+
+                document
+                    .getElementById(
+                        "verified-patients"
+                    )
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+
+            }
+        );
+
+
+        /* SELECT AMOUNT */
+
+
+        const amountButtons =
+            document.querySelectorAll(
+                ".supportAmount"
+            );
+
+
+        amountButtons.forEach(
+            function (button) {
+
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+
+                        amountButtons.forEach(
+                            function (btn) {
+
+                                btn.classList.remove(
+                                    "selected"
+                                );
+
+                            }
+                        );
+
+
+                        button.classList.add(
+                            "selected"
+                        );
+
+
+                        selectedAmount =
+                            Number(
+                                button.dataset.amount
+                            );
+
+
+                        document.getElementById(
+                            "selectedSupportMessage"
+                        ).textContent =
+                            "Selected monthly support: ₹" +
+                            selectedAmount.toLocaleString(
+                                "en-IN"
+                            );
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+        /* PROVIDE SUPPORT */
+
+
+        document.getElementById(
+            "provideSupportBtn"
+        ).addEventListener(
+            "click",
+            function () {
+
+
+                if (
+                    verification !== "verified"
+                ) {
+
+                    alert(
+                        "The patient must first be verified by the hospital."
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    selectedAmount === 0
+                ) {
+
+                    alert(
+                        "Please select a support amount first."
+                    );
+
+                    return;
+
+                }
+
+
+                localStorage.setItem(
+                    "mediSupportNGOSupport",
+                    selectedAmount
+                );
+
+
+                document.getElementById(
+                    "patientsSupported"
+                ).textContent =
+                    "1";
+
+
+                document.getElementById(
+                    "totalMonthlySupport"
+                ).textContent =
+                    "₹" +
+                    selectedAmount.toLocaleString(
+                        "en-IN"
+                    );
+
+
+                document.getElementById(
+                    "supportStatus"
+                ).textContent =
+                    "Active";
+
+
+                alert(
+                    "Monthly support of ₹" +
+                    selectedAmount.toLocaleString(
+                        "en-IN"
+                    ) +
+                    " has been successfully assigned to the patient."
+                );
+
+
+            }
+        );
+
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
