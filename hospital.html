@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediSupport | Hospital Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <div>
+            <h2>Medi<span>Support</span></h2>
+            <p>Hospital Verification Portal</p>
+        </div>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="#verification">
+            Patient Requests
+        </a>
+
+        <a href="#hospital-dashboard">
+            Dashboard
+        </a>
+
+    </nav>
+
+
+    <div class="nav-buttons">
+
+        <a href="index.html" class="login-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+
+            <i class="fa-solid fa-hospital"></i>
+
+            Medical Verification System
+
+        </div>
+
+
+        <h1>
+
+            Verify Genuine
+            <span>Medical Support Requests</span>
+
+        </h1>
+
+
+        <p>
+
+            Hospitals can review patient medical requirements,
+            verify submitted cases and help connect genuine
+            patients with suitable healthcare support.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                class="primary-btn"
+                id="viewRequestsBtn"
+            >
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                View Patient Requests
+
+            </button>
+
+
+            <a
+                href="#verification"
+                class="secondary-btn"
+            >
+
+                Start Verification
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <div>
+
+                    <h3>Review</h3>
+                    <p>Medical Requests</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-file-shield"></i>
+
+                <div>
+
+                    <h3>Verify</h3>
+                    <p>Genuine Cases</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <h3>Approve</h3>
+                    <p>Support Eligibility</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-visual">
+
+        <div class="main-support-card">
+
+            <div class="support-card-header">
+
+                <div class="patient-avatar">
+
+                    <i class="fa-solid fa-hospital"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Verification Workflow</h3>
+
+                    <p>Secure Medical Review</p>
+
+                </div>
+
+
+                <span class="verified-badge">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    Hospital
+
+                </span>
+
+            </div>
+
+
+            <div class="expense-summary">
+
+                <div>
+
+                    <p>Patient Requests</p>
+
+                    <h2 id="requestCount">
+
+                        1
+
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>Verification Status</p>
+
+                    <h2 class="green-text">
+
+                        Active
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-section">
+
+                <div class="progress-label">
+
+                    <span>Verification Process</span>
+
+                    <span id="verificationProgress">0%</span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="verificationProgressBar"
+                        style="width: 0%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- VERIFICATION SECTION -->
+
+<section
+    class="organization-dashboard"
+    id="verification"
+>
+
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <span class="section-tag">
+
+                PATIENT VERIFICATION
+
+            </span>
+
+            <h2>
+
+                Review Medical Support Request
+
+            </h2>
+
+            <p>
+
+                Review the submitted patient information
+                and verify the medical requirement.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="verification-card">
+
+
+        <div class="verification-card-header">
+
+            <div>
+
+                <h3 id="hospitalPatientName">
+
+                    No Patient Request Available
+
+                </h3>
+
+                <p id="hospitalPatientInfo">
+
+                    Patient information will appear here
+                    after registration.
+
+                </p>
+
+            </div>
+
+
+            <span
+                class="status pending-status"
+                id="hospitalVerificationStatus"
+            >
+
+                Pending Verification
+
+            </span>
+
+        </div>
+
+
+
+        <div class="verification-details">
+
+
+            <div>
+
+                <strong>
+
+                    Medical Condition
+
+                </strong>
+
+                <p id="hospitalMedicalCondition">
+
+                    Not Available
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <strong>
+
+                    Type of Expense
+
+                </strong>
+
+                <p id="hospitalExpenseType">
+
+                    Not Available
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <strong>
+
+                    Monthly Expense
+
+                </strong>
+
+                <p id="hospitalMonthlyExpense">
+
+                    ₹0
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <strong>
+
+                    Treatment Duration
+
+                </strong>
+
+                <p id="hospitalDuration">
+
+                    Not Available
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <strong>
+
+                    Hospital Name
+
+                </strong>
+
+                <p id="patientHospitalName">
+
+                    Not Available
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <strong>
+
+                    Doctor's Name
+
+                </strong>
+
+                <p id="patientDoctorName">
+
+                    Not Available
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- DOCUMENT STATUS -->
+
+        <div class="form-section">
+
+            <h3>
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                Submitted Documents
+
+            </h3>
+
+
+            <div class="upload-grid">
+
+
+                <div class="upload-box">
+
+                    <i class="fa-solid fa-prescription"></i>
+
+                    <h4>Prescription</h4>
+
+                    <small id="hospitalPrescriptionStatus">
+
+                        Document status unavailable
+
+                    </small>
+
+                </div>
+
+
+                <div class="upload-box">
+
+                    <i class="fa-solid fa-file-medical"></i>
+
+                    <h4>Medical Certificate</h4>
+
+                    <small id="hospitalCertificateStatus">
+
+                        Document status unavailable
+
+                    </small>
+
+                </div>
+
+
+                <div class="upload-box">
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                    <h4>Medical Bills</h4>
+
+                    <small id="hospitalBillStatus">
+
+                        Document status unavailable
+
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ACTIONS -->
+
+        <div class="verification-actions">
+
+            <button
+                class="approve-btn"
+                id="approvePatientBtn"
+            >
+
+                <i class="fa-solid fa-check"></i>
+
+                Approve & Verify
+
+            </button>
+
+
+            <button
+                class="reject-btn"
+                id="rejectPatientBtn"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+                Reject Request
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- HOSPITAL DASHBOARD -->
+
+<section
+    class="dashboard-section"
+    id="hospital-dashboard"
+>
+
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <span class="section-tag">
+
+                HOSPITAL DASHBOARD
+
+            </span>
+
+            <h2>
+
+                Verification Overview
+
+            </h2>
+
+            <p>
+
+                Monitor patient requests and verification status.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="dashboard-summary-grid">
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div>
+
+                <p>Total Requests</p>
+
+                <h3>1</h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon orange-icon">
+
+                <i class="fa-solid fa-clock"></i>
+
+            </div>
+
+            <div>
+
+                <p>Pending</p>
+
+                <h3 id="pendingCount">1</h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon green-icon">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+            <div>
+
+                <p>Verified</p>
+
+                <h3 id="verifiedCount">0</h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+
+                <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+            <div>
+
+                <p>Support Eligible</p>
+
+                <h3 id="eligibleCount">0</h3>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<footer>
+
+    <div class="footer-logo">
+
+        <i class="fa-solid fa-heart-pulse"></i>
+
+        <h2>Medi<span>Support</span></h2>
+
+    </div>
+
+    <p>
+        Hospital Verification Portal
+    </p>
+
+    <p class="footer-note">
+        Community Development Project Prototype
+    </p>
+
+</footer>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const viewRequestsBtn =
+        document.getElementById("viewRequestsBtn");
+
+
+    viewRequestsBtn.addEventListener("click", function () {
+
+        document
+            .getElementById("verification")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    });
+
+
+
+    /* LOAD PATIENT DATA */
+
+    const patientData =
+        JSON.parse(
+            localStorage.getItem("mediSupportPatient")
+        );
+
+
+    if (patientData) {
+
+
+        document.getElementById(
+            "hospitalPatientName"
+        ).textContent =
+            patientData.name;
+
+
+        document.getElementById(
+            "hospitalPatientInfo"
+        ).textContent =
+            "Patient medical support request submitted for verification.";
+
+
+        document.getElementById(
+            "hospitalMonthlyExpense"
+        ).textContent =
+            "₹" +
+            Number(
+                patientData.monthlyExpense
+            ).toLocaleString("en-IN");
+
+
+        document.getElementById(
+            "hospitalDuration"
+        ).textContent =
+            patientData.durationText;
+
+
+    }
+
+
+
+    /* APPROVE PATIENT */
+
+    document.getElementById(
+        "approvePatientBtn"
+    ).addEventListener(
+        "click",
+        function () {
+
+
+            localStorage.setItem(
+                "mediSupportVerification",
+                "verified"
+            );
+
+
+            document.getElementById(
+                "hospitalVerificationStatus"
+            ).textContent =
+                "Verified";
+
+
+            document.getElementById(
+                "hospitalVerificationStatus"
+            ).className =
+                "status verified-status";
+
+
+            document.getElementById(
+                "verificationProgress"
+            ).textContent =
+                "100%";
+
+
+            document.getElementById(
+                "verificationProgressBar"
+            ).style.width =
+                "100%";
+
+
+            document.getElementById(
+                "pendingCount"
+            ).textContent =
+                "0";
+
+
+            document.getElementById(
+                "verifiedCount"
+            ).textContent =
+                "1";
+
+
+            document.getElementById(
+                "eligibleCount"
+            ).textContent =
+                "1";
+
+
+            alert(
+                "Patient request has been verified successfully. NGOs and pharmacies can now view this patient for support."
+            );
+
+
+        }
+    );
+
+
+
+    /* REJECT */
+
+    document.getElementById(
+        "rejectPatientBtn"
+    ).addEventListener(
+        "click",
+        function () {
+
+
+            const confirmation =
+                confirm(
+                    "Are you sure you want to reject this patient request?"
+                );
+
+
+            if (confirmation) {
+
+
+                localStorage.setItem(
+                    "mediSupportVerification",
+                    "rejected"
+                );
+
+
+                document.getElementById(
+                    "hospitalVerificationStatus"
+                ).textContent =
+                    "Rejected";
+
+
+                alert(
+                    "Patient request has been rejected."
+                );
+
+
+            }
+
+
+        }
+    );
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>
