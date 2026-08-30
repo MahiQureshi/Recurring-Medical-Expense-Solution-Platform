@@ -2389,183 +2389,182 @@ document.addEventListener(
     }
 );
 /* =========================================================
-   ADDITIONAL CLICKABLE FEATURES
+   CLICKABLE CARDS - RELIABLE VERSION
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================================
-       PROBLEM CARDS
-       ========================================= */
+    /* -----------------------------
+       PROBLEM SECTION CARDS
+    ------------------------------ */
 
-    const problemCards = document.querySelectorAll(".problem-card");
+    const recurringMedicines = document.querySelector(".problem-card:nth-child(1)");
+    const longTermTreatment = document.querySelector(".problem-card:nth-child(2)");
+    const financialBurden = document.querySelector(".problem-card:nth-child(3)");
 
-    problemCards.forEach(function (card) {
+    if (recurringMedicines) {
+        recurringMedicines.style.cursor = "pointer";
 
-        card.style.cursor = "pointer";
-
-        card.addEventListener("click", function () {
-
-            const title = this.querySelector("h3").textContent.trim();
+        recurringMedicines.onclick = () => {
 
             const expenseType =
                 document.getElementById("expenseType");
 
-
-            if (title === "Recurring Medicines") {
-
-                if (expenseType) {
-
-                    expenseType.value =
-                        "Monthly Medicines";
-
-                }
-
+            if (expenseType) {
+                expenseType.value = "Monthly Medicines";
             }
 
-            else if (title === "Long-Term Treatment") {
+            const registration =
+                document.getElementById("patient-registration");
 
-                if (expenseType) {
+            if (registration) {
+                registration.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        };
+    }
 
-                    expenseType.value =
-                        "Regular Treatment";
 
-                }
+    if (longTermTreatment) {
+        longTermTreatment.style.cursor = "pointer";
 
+        longTermTreatment.onclick = () => {
+
+            const expenseType =
+                document.getElementById("expenseType");
+
+            if (expenseType) {
+                expenseType.value = "Regular Treatment";
             }
 
+            const registration =
+                document.getElementById("patient-registration");
 
-            scrollToSection("patient-registration");
+            if (registration) {
+                registration.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        };
+    }
 
-        });
 
-    });
+    if (financialBurden) {
+        financialBurden.style.cursor = "pointer";
+
+        financialBurden.onclick = () => {
+
+            const registration =
+                document.getElementById("patient-registration");
+
+            if (registration) {
+                registration.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        };
+    }
 
 
-
-    /* =========================================
-       MAKE COMPLETE USER CARDS CLICKABLE
-       ========================================= */
+    /* -----------------------------
+       USER CARDS
+    ------------------------------ */
 
     const patientCard =
         document.querySelector(".patient-card");
 
-
     const hospitalCard =
         document.querySelector(".hospital-card");
-
 
     const ngoCard =
         document.querySelector(".ngo-card");
 
-
     const pharmacyCard =
         document.querySelector(".pharmacy-card");
-
 
 
     if (patientCard) {
 
         patientCard.style.cursor = "pointer";
 
-        patientCard.addEventListener(
-            "click",
-            function () {
+        patientCard.onclick = function (event) {
 
-                scrollToSection(
-                    "patient-registration"
-                );
-
+            if (
+                event.target.closest("button")
+            ) {
+                return;
             }
-        );
 
+            document
+                .getElementById("patient-registration")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        };
     }
-
 
 
     if (hospitalCard) {
 
         hospitalCard.style.cursor = "pointer";
 
-        hospitalCard.addEventListener(
-            "click",
-            function () {
+        hospitalCard.onclick = function (event) {
 
-                scrollToSection(
-                    "hospital-dashboard"
-                );
-
+            if (
+                event.target.closest("button")
+            ) {
+                return;
             }
-        );
 
+            document
+                .getElementById("hospital-dashboard")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        };
     }
-
 
 
     if (ngoCard) {
 
         ngoCard.style.cursor = "pointer";
 
-        ngoCard.addEventListener(
-            "click",
-            function () {
+        ngoCard.onclick = function (event) {
 
-                scrollToSection(
-                    "ngo-dashboard"
-                );
-
+            if (
+                event.target.closest("button")
+            ) {
+                return;
             }
-        );
 
+            document
+                .getElementById("ngo-dashboard")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        };
     }
-
 
 
     if (pharmacyCard) {
 
         pharmacyCard.style.cursor = "pointer";
 
-        pharmacyCard.addEventListener(
-            "click",
-            function () {
+        pharmacyCard.onclick = function (event) {
 
-                scrollToSection(
-                    "pharmacy-dashboard"
-                );
-
+            if (
+                event.target.closest("button")
+            ) {
+                return;
             }
-        );
 
+            document
+                .getElementById("pharmacy-dashboard")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        };
     }
 
-
-
-    /* =========================================
-       PREVENT BUTTON CLICK FROM TRIGGERING
-       THE CARD TWICE
-       ========================================= */
-
-    const userButtons =
-        document.querySelectorAll(
-            ".user-action-btn"
-        );
-
-
-    userButtons.forEach(function (button) {
-
-        button.addEventListener(
-            "click",
-            function (event) {
-
-                event.stopPropagation();
-
-            }
-        );
-
-    });
-
 });
-
-/* =========================================================
-   END OF MEDISUPPORT JAVASCRIPT
-   ========================================================= */
