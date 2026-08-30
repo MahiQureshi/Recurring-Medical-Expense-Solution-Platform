@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediSupport | Patient Portal</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================= -->
+<!-- NAVBAR -->
+<!-- ========================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+        </div>
+
+
+        <div>
+
+            <h2>
+                Medi<span>Support</span>
+            </h2>
+
+            <p>
+                Patient Support Portal
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+
+            <i class="fa-solid fa-house"></i>
+
+            Home
+
+        </a>
+
+
+        <a href="#registration">
+
+            Register
+
+        </a>
+
+
+        <a href="#dashboard">
+
+            My Dashboard
+
+        </a>
+
+    </nav>
+
+
+
+    <div class="nav-buttons">
+
+        <a
+            href="index.html"
+            class="login-btn"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- ========================================= -->
+<!-- PATIENT HERO -->
+<!-- ========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            Secure Patient Support Request
+
+        </div>
+
+
+        <h1>
+
+            Get Support For Your
+            <span>Recurring Medical Expenses</span>
+
+        </h1>
+
+
+        <p>
+
+            Register your monthly medical requirements,
+            upload supporting documents and apply for
+            continuous healthcare assistance.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                class="primary-btn"
+                id="startApplicationBtn"
+            >
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                Start Application
+
+            </button>
+
+
+            <a
+                href="#how-patient-works"
+                class="secondary-btn"
+            >
+
+                How It Works
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <div>
+
+                    <h3>Step 1</h3>
+
+                    <p>
+                        Submit Request
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <div>
+
+                    <h3>Step 2</h3>
+
+                    <p>
+                        Get Verified
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-hand-holding-heart"></i>
+
+                <div>
+
+                    <h3>Step 3</h3>
+
+                    <p>
+                        Receive Support
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- PATIENT STATUS CARD -->
+
+    <div class="hero-visual">
+
+        <div class="main-support-card">
+
+
+            <div class="support-card-header">
+
+
+                <div class="patient-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Your Support Journey
+                    </h3>
+
+                    <p>
+                        Simple & Transparent
+                    </p>
+
+                </div>
+
+
+                <span class="verified-badge">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    Secure
+
+                </span>
+
+            </div>
+
+
+
+            <div class="expense-summary">
+
+
+                <div>
+
+                    <p>
+                        Monthly Requirement
+                    </p>
+
+                    <h2 id="heroMonthlyExpense">
+
+                        ₹0
+
+                    </h2>
+
+                </div>
+
+
+
+                <div>
+
+                    <p>
+                        Estimated Support
+                    </p>
+
+                    <h2 class="green-text">
+
+                        Available
+
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="progress-section">
+
+                <div class="progress-label">
+
+                    <span>
+                        Application Progress
+                    </span>
+
+                    <span id="applicationProgress">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="applicationProgressBar"
+                        style="width: 0%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="support-sources">
+
+
+                <div class="support-source">
+
+                    <i class="fa-solid fa-file-pen"></i>
+
+                    <span>
+                        Apply
+                    </span>
+
+                    <strong>
+                        Step 1
+                    </strong>
+
+                </div>
+
+
+
+                <div class="support-source">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>
+                        Verify
+                    </span>
+
+                    <strong>
+                        Step 2
+                    </strong>
+
+                </div>
+
+
+
+                <div class="support-source">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <span>
+                        Support
+                    </span>
+
+                    <strong>
+                        Step 3
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- HOW IT WORKS -->
+<!-- ========================================= -->
+
+<section
+    class="how-it-works"
+    id="how-patient-works"
+>
+
+
+    <div class="section-heading">
+
+        <span class="section-tag">
+
+            PATIENT JOURNEY
+
+        </span>
+
+
+        <h2>
+
+            How MediSupport Helps You
+
+        </h2>
+
+
+        <p>
+
+            Follow a simple process to request
+            recurring healthcare assistance.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="timeline">
+
+
+        <!-- STEP 1 -->
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-number">
+
+                1
+
+            </div>
+
+
+            <div class="timeline-content">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <h3>
+
+                    Submit Your Requirement
+
+                </h3>
+
+
+                <p>
+
+                    Enter your medical condition,
+                    recurring expenses and expected
+                    treatment duration.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEP 2 -->
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-number">
+
+                2
+
+            </div>
+
+
+            <div class="timeline-content">
+
+                <i class="fa-solid fa-file-arrow-up"></i>
+
+                <h3>
+
+                    Upload Documents
+
+                </h3>
+
+
+                <p>
+
+                    Submit prescriptions, medical
+                    certificates and previous bills.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEP 3 -->
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-number">
+
+                3
+
+            </div>
+
+
+            <div class="timeline-content">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <h3>
+
+                    Medical Verification
+
+                </h3>
+
+
+                <p>
+
+                    Your request can be reviewed
+                    and verified by an authorized
+                    hospital.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEP 4 -->
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-number">
+
+                4
+
+            </div>
+
+
+            <div class="timeline-content">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                <h3>
+
+                    Smart Support Matching
+
+                </h3>
+
+
+                <p>
+
+                    Suitable NGOs, funding
+                    organizations and pharmacies
+                    can be matched with your needs.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEP 5 -->
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-number">
+
+                5
+
+            </div>
+
+
+            <div class="timeline-content">
+
+                <i class="fa-solid fa-heart-circle-check"></i>
+
+                <h3>
+
+                    Receive Continuous Support
+
+                </h3>
+
+
+                <p>
+
+                    Track financial assistance and
+                    concessions for your recurring
+                    healthcare requirements.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- PATIENT REGISTRATION -->
+<!-- ========================================= -->
+
+<section
+    class="registration-section"
+    id="registration"
+>
+
+
+    <div class="form-container">
+
+
+        <div class="form-header">
+
+
+            <span class="section-tag">
+
+                PATIENT REGISTRATION
+
+            </span>
+
+
+            <h2>
+
+                Apply For Medical Support
+
+            </h2>
+
+
+            <p>
+
+                Fill in the details below to create
+                your recurring healthcare support request.
+
+            </p>
+
+
+        </div>
+
+
+
+        <form id="patientRegistrationForm">
+
+
+            <!-- ========================================= -->
+            <!-- PERSONAL INFORMATION -->
+            <!-- ========================================= -->
+
+            <div class="form-section">
+
+
+                <h3>
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Personal Information
+
+                </h3>
+
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Full Name *
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="patientName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Age *
+
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="patientAge"
+                            min="1"
+                            max="120"
+                            placeholder="Enter your age"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Mobile Number *
+
+                        </label>
+
+
+                        <input
+                            type="tel"
+                            id="patientPhone"
+                            placeholder="Enter mobile number"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Email Address
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="patientEmail"
+                            placeholder="Enter email address"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            City *
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="patientCity"
+                            placeholder="Enter your city"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            State
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="patientState"
+                            placeholder="Enter your state"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- MEDICAL INFORMATION -->
+            <!-- ========================================= -->
+
+            <div class="form-section">
+
+
+                <h3>
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                    Medical Information
+
+                </h3>
+
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Medical Condition *
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="patientCondition"
+                            placeholder="Enter medical condition"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Hospital Name
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="patientHospital"
+                            placeholder="Hospital where treatment is received"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Doctor's Name
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="patientDoctor"
+                            placeholder="Enter doctor's name"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Type of Medical Expense *
+
+                        </label>
+
+
+                        <select
+                            id="patientExpenseType"
+                            required
+                        >
+
+                            <option value="">
+
+                                Select Expense Type
+
+                            </option>
+
+
+                            <option value="Monthly Medicines">
+
+                                Monthly Medicines
+
+                            </option>
+
+
+                            <option value="Regular Treatment">
+
+                                Regular Treatment
+
+                            </option>
+
+
+                            <option value="Medical Tests">
+
+                                Medical Tests
+
+                            </option>
+
+
+                            <option value="Hospital Visits">
+
+                                Hospital Visits
+
+                            </option>
+
+
+                            <option value="Therapy">
+
+                                Therapy
+
+                            </option>
+
+
+                            <option value="Other">
+
+                                Other
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- EXPENSE INFORMATION -->
+            <!-- ========================================= -->
+
+            <div class="form-section">
+
+
+                <h3>
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    Recurring Medical Expense
+
+                </h3>
+
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Estimated Monthly Expense (₹) *
+
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="patientMonthlyExpense"
+                            min="0"
+                            placeholder="Example: 5000"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Expected Duration *
+
+                        </label>
+
+
+                        <select
+                            id="patientDuration"
+                            required
+                        >
+
+                            <option value="">
+
+                                Select Duration
+
+                            </option>
+
+
+                            <option value="3">
+
+                                3 Months
+
+                            </option>
+
+
+                            <option value="6">
+
+                                6 Months
+
+                            </option>
+
+
+                            <option value="12">
+
+                                1 Year
+
+                            </option>
+
+
+                            <option value="24">
+
+                                2 Years
+
+                            </option>
+
+
+                            <option value="36">
+
+                                3 Years
+
+                            </option>
+
+
+                            <option value="48">
+
+                                4 Years
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- EXPENSE PREVIEW -->
+
+                <div class="expense-preview">
+
+
+                    <div>
+
+                        <p>
+
+                            Monthly Expense
+
+                        </p>
+
+
+                        <h3 id="monthlyExpensePreview">
+
+                            ₹0
+
+                        </h3>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <p>
+
+                            Estimated Total Expense
+
+                        </p>
+
+
+                        <h3 id="totalExpensePreview">
+
+                            ₹0
+
+                        </h3>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- DOCUMENT UPLOAD -->
+            <!-- ========================================= -->
+
+            <div class="form-section">
+
+
+                <h3>
+
+                    <i class="fa-solid fa-file-medical"></i>
+
+                    Medical Documents
+
+                </h3>
+
+
+
+                <p class="form-note">
+
+                    Upload available documents to support
+                    your medical assistance request.
+
+                </p>
+
+
+
+                <div class="upload-grid">
+
+
+                    <!-- PRESCRIPTION -->
+
+                    <div class="upload-box">
+
+
+                        <i class="fa-solid fa-prescription"></i>
+
+
+                        <h4>
+
+                            Prescription
+
+                        </h4>
+
+
+                        <input
+                            type="file"
+                            id="patientPrescription"
+                            accept=".jpg,.jpeg,.png,.pdf"
+                        >
+
+
+                        <small
+                            id="prescriptionFileName"
+                        >
+
+                            No file selected
+
+                        </small>
+
+
+                    </div>
+
+
+
+                    <!-- MEDICAL CERTIFICATE -->
+
+                    <div class="upload-box">
+
+
+                        <i class="fa-solid fa-file-medical"></i>
+
+
+                        <h4>
+
+                            Medical Certificate
+
+                        </h4>
+
+
+                        <input
+                            type="file"
+                            id="patientCertificate"
+                            accept=".jpg,.jpeg,.png,.pdf"
+                        >
+
+
+                        <small
+                            id="certificateFileName"
+                        >
+
+                            No file selected
+
+                        </small>
+
+
+                    </div>
+
+
+
+                    <!-- MEDICAL BILL -->
+
+                    <div class="upload-box">
+
+
+                        <i class="fa-solid fa-receipt"></i>
+
+
+                        <h4>
+
+                            Previous Medical Bills
+
+                        </h4>
+
+
+                        <input
+                            type="file"
+                            id="patientBill"
+                            accept=".jpg,.jpeg,.png,.pdf"
+                        >
+
+
+                        <small
+                            id="billFileName"
+                        >
+
+                            No file selected
+
+                        </small>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- DECLARATION -->
+
+            <div class="form-section">
+
+
+                <div class="declaration-box">
+
+
+                    <input
+                        type="checkbox"
+                        id="patientDeclaration"
+                        required
+                    >
+
+
+                    <label
+                        for="patientDeclaration"
+                    >
+
+                        I confirm that the information
+                        provided is accurate for this
+                        prototype medical support request.
+
+                    </label>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="submit-request-btn"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Submit Medical Support Request
+
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- SUCCESS MESSAGE -->
+<!-- ========================================= -->
+
+<section
+    class="dashboard-section"
+    id="applicationSuccess"
+    style="display: none;"
+>
+
+
+    <div class="dashboard-header">
+
+
+        <div>
+
+
+            <span class="section-tag">
+
+                APPLICATION SUBMITTED
+
+            </span>
+
+
+            <h2>
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Your Request Has Been Submitted
+
+            </h2>
+
+
+            <p id="successMessage">
+
+                Your medical support request has
+                been created successfully.
+
+            </p>
+
+
+        </div>
+
+
+        <div
+            class="verification-status pending"
+        >
+
+            <i class="fa-solid fa-clock"></i>
+
+            Under Verification
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- PATIENT DASHBOARD -->
+<!-- ========================================= -->
+
+<section
+    class="dashboard-section"
+    id="dashboard"
+>
+
+
+    <div class="dashboard-header">
+
+
+        <div>
+
+
+            <span class="section-tag">
+
+                MY DASHBOARD
+
+            </span>
+
+
+            <h2>
+
+                My Medical Support Dashboard
+
+            </h2>
+
+
+            <p id="dashboardWelcome">
+
+                Submit your application to view
+                your personalized support details.
+
+            </p>
+
+
+        </div>
+
+
+        <div
+            class="verification-status pending"
+            id="patientVerificationStatus"
+        >
+
+            <i class="fa-solid fa-clock"></i>
+
+            Not Submitted
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- DASHBOARD SUMMARY -->
+
+    <div class="dashboard-summary-grid">
+
+
+        <div class="summary-card">
+
+
+            <div class="summary-icon">
+
+                <i class="fa-solid fa-wallet"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    Monthly Expense
+
+                </p>
+
+
+                <h3 id="dashboardMonthlyExpense">
+
+                    ₹0
+
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+
+            <div class="summary-icon">
+
+                <i class="fa-solid fa-calendar"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    Treatment Duration
+
+                </p>
+
+
+                <h3 id="dashboardDuration">
+
+                    Not Selected
+
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+
+            <div class="summary-icon green-icon">
+
+                <i class="fa-solid fa-hand-holding-heart"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    Support Received
+
+                </p>
+
+
+                <h3 id="dashboardSupport">
+
+                    ₹0
+
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+
+            <div class="summary-icon orange-icon">
+
+                <i class="fa-solid fa-coins"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    Remaining Expense
+
+                </p>
+
+
+                <h3 id="dashboardRemaining">
+
+                    ₹0
+
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SUPPORT STATUS -->
+
+    <div class="demo-verification">
+
+
+        <div>
+
+
+            <h3>
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                Application Status
+
+            </h3>
+
+
+            <p>
+
+                Your request will move through
+                document verification and support matching.
+
+            </p>
+
+
+        </div>
+
+
+        <button
+            id="viewApplicationBtn"
+        >
+
+            <i class="fa-solid fa-eye"></i>
+
+            View Application Details
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- SUPPORT MATCHING -->
+
+    <div class="matching-section">
+
+
+        <div class="matching-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Available Support
+
+                </h2>
+
+
+                <p>
+
+                    Potential support options will
+                    appear after verification.
+
+                </p>
+
+
+            </div>
+
+
+            <button
+                id="checkSupportBtn"
+            >
+
+                Check Support Status
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="support-match-grid">
+
+
+            <div class="empty-state">
+
+
+                <i class="fa-solid fa-hourglass-half"></i>
+
+
+                <h3>
+
+                    Awaiting Verification
+
+                </h3>
+
+
+                <p>
+
+                    Your medical documents need to
+                    be reviewed before support providers
+                    can be matched.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- MONTHLY TRACKER -->
+
+    <div class="tracker-section">
+
+
+        <h2>
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Recurring Medical Expense Tracker
+
+        </h2>
+
+
+
+        <div class="tracker-table-wrapper">
+
+
+            <table>
+
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Month
+                        </th>
+
+                        <th>
+                            Medical Expense
+                        </th>
+
+                        <th>
+                            Support Received
+                        </th>
+
+                        <th>
+                            Remaining
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+
+                <tbody
+                    id="patientTrackerBody"
+                >
+
+
+                    <tr>
+
+                        <td>
+                            Month 1
+                        </td>
+
+
+                        <td id="trackerExpense">
+
+                            ₹0
+
+                        </td>
+
+
+                        <td>
+
+                            ₹0
+
+                        </td>
+
+
+                        <td id="trackerRemaining">
+
+                            ₹0
+
+                        </td>
+
+
+                        <td>
+
+                            <span
+                                class="status pending-status"
+                            >
+
+                                Not Started
+
+                            </span>
+
+                        </td>
+
+
+                    </tr>
+
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        <i class="fa-solid fa-heart-pulse"></i>
+
+        <h2>
+
+            Medi<span>Support</span>
+
+        </h2>
+
+    </div>
+
+
+    <p>
+
+        Patient Portal for Recurring Healthcare Support
+
+    </p>
+
+
+    <p class="footer-note">
+
+        Community Development Project Prototype
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- ========================================= -->
+<!-- PATIENT PAGE JAVASCRIPT -->
+<!-- ========================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =========================================
+       START APPLICATION BUTTON
+    ========================================= */
+
+    const startApplicationBtn =
+        document.getElementById("startApplicationBtn");
+
+
+    if (startApplicationBtn) {
+
+        startApplicationBtn.addEventListener(
+            "click",
+            function () {
+
+                document
+                    .getElementById("registration")
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================
+       EXPENSE CALCULATOR
+    ========================================= */
+
+    const monthlyExpense =
+        document.getElementById(
+            "patientMonthlyExpense"
+        );
+
+
+    const duration =
+        document.getElementById(
+            "patientDuration"
+        );
+
+
+    const monthlyPreview =
+        document.getElementById(
+            "monthlyExpensePreview"
+        );
+
+
+    const totalPreview =
+        document.getElementById(
+            "totalExpensePreview"
+        );
+
+
+    const heroMonthlyExpense =
+        document.getElementById(
+            "heroMonthlyExpense"
+        );
+
+
+    function updateExpenseCalculation() {
+
+
+        const monthly =
+            Number(monthlyExpense.value) || 0;
+
+
+        const months =
+            Number(duration.value) || 0;
+
+
+        const total =
+            monthly * months;
+
+
+        const formattedMonthly =
+            "₹" + monthly.toLocaleString("en-IN");
+
+
+        const formattedTotal =
+            "₹" + total.toLocaleString("en-IN");
+
+
+        monthlyPreview.textContent =
+            formattedMonthly;
+
+
+        totalPreview.textContent =
+            formattedTotal;
+
+
+        heroMonthlyExpense.textContent =
+            formattedMonthly;
+
+    }
+
+
+    if (monthlyExpense) {
+
+        monthlyExpense.addEventListener(
+            "input",
+            updateExpenseCalculation
+        );
+
+    }
+
+
+    if (duration) {
+
+        duration.addEventListener(
+            "change",
+            updateExpenseCalculation
+        );
+
+    }
+
+
+
+    /* =========================================
+       FILE NAME DISPLAY
+    ========================================= */
+
+    function setupFileName(
+        inputId,
+        displayId
+    ) {
+
+
+        const input =
+            document.getElementById(inputId);
+
+
+        const display =
+            document.getElementById(displayId);
+
+
+        if (input && display) {
+
+
+            input.addEventListener(
+                "change",
+                function () {
+
+
+                    if (
+                        this.files &&
+                        this.files.length > 0
+                    ) {
+
+                        display.textContent =
+                            this.files[0].name;
+
+                    }
+
+                    else {
+
+                        display.textContent =
+                            "No file selected";
+
+                    }
+
+
+                }
+            );
+
+
+        }
+
+    }
+
+
+
+    setupFileName(
+        "patientPrescription",
+        "prescriptionFileName"
+    );
+
+
+    setupFileName(
+        "patientCertificate",
+        "certificateFileName"
+    );
+
+
+    setupFileName(
+        "patientBill",
+        "billFileName"
+    );
+
+
+
+    /* =========================================
+       FORM SUBMISSION
+    ========================================= */
+
+    const patientForm =
+        document.getElementById(
+            "patientRegistrationForm"
+        );
+
+
+    if (patientForm) {
+
+
+        patientForm.addEventListener(
+            "submit",
+            function (event) {
+
+
+                event.preventDefault();
+
+
+                /* Get values */
+
+                const name =
+                    document.getElementById(
+                        "patientName"
+                    ).value;
+
+
+                const expense =
+                    Number(
+                        document.getElementById(
+                            "patientMonthlyExpense"
+                        ).value
+                    ) || 0;
+
+
+                const durationValue =
+                    document.getElementById(
+                        "patientDuration"
+                    ).value;
+
+
+                const durationText =
+                    document.getElementById(
+                        "patientDuration"
+                    ).options[
+                        document.getElementById(
+                            "patientDuration"
+                        ).selectedIndex
+                    ].text;
+
+
+                /* Update success message */
+
+                document.getElementById(
+                    "successMessage"
+                ).textContent =
+                    name +
+                    ", your medical support request has been submitted successfully and is now under verification.";
+
+
+                /* Update dashboard */
+
+                document.getElementById(
+                    "dashboardWelcome"
+                ).textContent =
+                    "Welcome, " +
+                    name +
+                    ". Track your recurring healthcare support below.";
+
+
+                document.getElementById(
+                    "dashboardMonthlyExpense"
+                ).textContent =
+                    "₹" +
+                    expense.toLocaleString(
+                        "en-IN"
+                    );
+
+
+                document.getElementById(
+                    "dashboardDuration"
+                ).textContent =
+                    durationText;
+
+
+                document.getElementById(
+                    "dashboardRemaining"
+                ).textContent =
+                    "₹" +
+                    expense.toLocaleString(
+                        "en-IN"
+                    );
+
+
+                document.getElementById(
+                    "trackerExpense"
+                ).textContent =
+                    "₹" +
+                    expense.toLocaleString(
+                        "en-IN"
+                    );
+
+
+                document.getElementById(
+                    "trackerRemaining"
+                ).textContent =
+                    "₹" +
+                    expense.toLocaleString(
+                        "en-IN"
+                    );
+
+
+                /* Update verification status */
+
+                const verificationStatus =
+                    document.getElementById(
+                        "patientVerificationStatus"
+                    );
+
+
+                verificationStatus.innerHTML =
+
+                    '<i class="fa-solid fa-clock"></i> Under Verification';
+
+
+                verificationStatus.classList.remove(
+                    "pending"
+                );
+
+
+                verificationStatus.classList.add(
+                    "pending"
+                );
+
+
+                /* Show success section */
+
+                const successSection =
+                    document.getElementById(
+                        "applicationSuccess"
+                    );
+
+
+                successSection.style.display =
+                    "block";
+
+
+                /* Scroll to success */
+
+                successSection.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+
+                /* Update progress */
+
+                document.getElementById(
+                    "applicationProgress"
+                ).textContent =
+                    "60%";
+
+
+                document.getElementById(
+                    "applicationProgressBar"
+                ).style.width =
+                    "60%";
+
+
+                /* Save basic prototype data */
+
+                const patientData = {
+
+                    name: name,
+
+                    monthlyExpense: expense,
+
+                    duration: durationValue,
+
+                    durationText: durationText
+
+                };
+
+
+                localStorage.setItem(
+                    "mediSupportPatient",
+                    JSON.stringify(
+                        patientData
+                    )
+                );
+
+
+            }
+        );
+
+
+    }
+
+
+
+    /* =========================================
+       VIEW APPLICATION BUTTON
+    ========================================= */
+
+    const viewApplicationBtn =
+        document.getElementById(
+            "viewApplicationBtn"
+        );
+
+
+    if (viewApplicationBtn) {
+
+
+        viewApplicationBtn.addEventListener(
+            "click",
+            function () {
+
+
+                alert(
+                    "Application details are available in this prototype. Your request is currently under verification."
+                );
+
+
+            }
+        );
+
+
+    }
+
+
+
+    /* =========================================
+       CHECK SUPPORT STATUS
+    ========================================= */
+
+    const checkSupportBtn =
+        document.getElementById(
+            "checkSupportBtn"
+        );
+
+
+    if (checkSupportBtn) {
+
+
+        checkSupportBtn.addEventListener(
+            "click",
+            function () {
+
+
+                alert(
+                    "Support matching will begin after hospital verification. This prototype currently demonstrates the workflow."
+                );
+
+
+            }
+        );
+
+
+    }
+
+
+});
+
+</script>
+
+
+<!-- MAIN JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
